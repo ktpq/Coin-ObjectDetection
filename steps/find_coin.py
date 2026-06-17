@@ -27,7 +27,7 @@ base_model = GroundingDINO(ontology=ontology)
 print("🔍 เริ่มทำการ Auto-Label...")
 dataset = base_model.label(
     input_folder=IMAGE_DIR_PATH,
-    extension=".jpg",  # 🚨 เช็คให้ชัวร์ว่าไฟล์ใน test_images_flat เป็น .jpg
+    extension=".png",  # 🚨 เช็คให้ชัวร์ว่าไฟล์ใน test_images_flat เป็น .jpg
     output_folder=DATASET_DIR_PATH
 )
 

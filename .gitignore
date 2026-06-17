@@ -1,3 +1,8 @@
 howto.md
 .venv/
 venv/
+/test_images_flat
+data/
+dataset/
+custom_data
+data.yml

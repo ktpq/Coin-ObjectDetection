@@ -5,7 +5,8 @@ import shutil
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # 2. ถอยขึ้นไป 1 ชั้น (..) แล้วเข้าไปหาโฟลเดอร์เป้าหมาย
-SOURCE_DIR = os.path.join(CURRENT_DIR, "..", "test_images", "thai_coins_images")
+# SOURCE_DIR = os.path.join(CURRENT_DIR, "..", "test_images", "thai_coins_images")
+SOURCE_DIR = os.path.join(CURRENT_DIR, "..", "images")
 FLAT_DIR = os.path.join(CURRENT_DIR, "..", "test_images_flat")
 
 os.makedirs(FLAT_DIR, exist_ok=True)

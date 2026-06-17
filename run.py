@@ -14,15 +14,22 @@ def run_cmd(command):
 window_commands = [
     'python steps\\clear_model.py',
 
+    # phase1
     'python steps\\flat_images.py',
+
+    # phase2
     'python steps\\find_coin.py',
     'python steps\\build_custom_data.py',
 
     # -------------------
 
+    # phase3
     'python steps\\train_val_split.py --datapath="custom_data" --train_pct=0.9',
     "python steps\\config_training.py",
+
+    # phase4
     'python steps\\train.py',
+
     'python steps\\clear_unused_file.py',
 ]
 

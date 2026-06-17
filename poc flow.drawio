@@ -1,0 +1,109 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="หน้า-1" id="vkKIhqJrZflsDl7xqISg">
+    <mxGraphModel dx="7576" dy="4284" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fillColor=none;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="150" width="330" x="230" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-5" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1. Data Preparation" vertex="1">
+          <mxGeometry height="30" width="150" x="220" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-19" edge="1" parent="1" source="6Pg4M3MRJXrsTJBjLDmR-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="6Pg4M3MRJXrsTJBjLDmR-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Folder: images&lt;div&gt;(ex. 1_1baht, 2_ 5baht)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="139.5" x="325.25" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-14" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fillColor=none;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="730" width="330" x="230" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-15" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="2. Auto Labeling" vertex="1">
+          <mxGeometry height="30" width="150" x="215" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-20" edge="1" parent="1" source="6Pg4M3MRJXrsTJBjLDmR-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6Pg4M3MRJXrsTJBjLDmR-18">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="flat_images.py" vertex="1">
+          <mxGeometry height="60" width="150" x="320" y="395" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-22" edge="1" parent="1" source="6Pg4M3MRJXrsTJBjLDmR-18" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="6Pg4M3MRJXrsTJBjLDmR-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Flat Folder&lt;div&gt;(format: FolderName___FileName)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="214.75" x="287.62" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-26" edge="1" parent="1" source="6Pg4M3MRJXrsTJBjLDmR-21" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6Pg4M3MRJXrsTJBjLDmR-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-21" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="find_coin.py&lt;div&gt;(Grounding Dino)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="319.99" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-29" edge="1" parent="1" source="6Pg4M3MRJXrsTJBjLDmR-23" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="6Pg4M3MRJXrsTJBjLDmR-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="dataset&lt;div&gt;(Images + &#39;coin&#39; Labels)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="214.75" x="287.63" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-30" edge="1" parent="1" source="6Pg4M3MRJXrsTJBjLDmR-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6Pg4M3MRJXrsTJBjLDmR-28">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-27" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="build_custom_data.py" vertex="1">
+          <mxGeometry height="60" width="150" x="319.99" y="840" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-61" edge="1" parent="1" source="6Pg4M3MRJXrsTJBjLDmR-28" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6Pg4M3MRJXrsTJBjLDmR-51">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-28" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="custom_data&lt;div&gt;(images, labels, classes.txt, notes.json)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="232.37" x="278.8" y="950" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-44" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fillColor=none;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="501" width="330" x="230" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-45" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="3. Training Configuration" vertex="1">
+          <mxGeometry height="30" width="210" x="210.00000000000003" y="1130" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-50" edge="1" parent="1" source="6Pg4M3MRJXrsTJBjLDmR-51" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6Pg4M3MRJXrsTJBjLDmR-53">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-51" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="train_val_split.py" vertex="1">
+          <mxGeometry height="60" width="150" x="319.99" y="1190" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-52" edge="1" parent="1" source="6Pg4M3MRJXrsTJBjLDmR-53" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="6Pg4M3MRJXrsTJBjLDmR-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-53" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="data&lt;div&gt;(train/validation)&lt;/div&gt;" vertex="1">
+          <mxGeometry height="70" width="131.2" x="329.41" y="1295" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-54" edge="1" parent="1" source="6Pg4M3MRJXrsTJBjLDmR-55" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" target="6Pg4M3MRJXrsTJBjLDmR-57">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-55" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="config_training.py" vertex="1">
+          <mxGeometry height="60" width="150" x="319.98" y="1415" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-68" edge="1" parent="1" source="6Pg4M3MRJXrsTJBjLDmR-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="6Pg4M3MRJXrsTJBjLDmR-66">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-57" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="data.yml" vertex="1">
+          <mxGeometry height="70" width="112.37" x="338.82" y="1525" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-63" parent="1" style="rounded=0;whiteSpace=wrap;html=1;strokeColor=default;fillColor=none;strokeWidth=1;" value="" vertex="1">
+          <mxGeometry height="260" width="330" x="230" y="1680" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-64" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="4. Model Training" vertex="1">
+          <mxGeometry height="30" width="150" x="220" y="1680" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-69" edge="1" parent="1" source="6Pg4M3MRJXrsTJBjLDmR-66" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="6Pg4M3MRJXrsTJBjLDmR-67">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-66" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="train.py&lt;div&gt;Base Model: Yolo11s&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="150" x="320.01" y="1725" as="geometry" />
+        </mxCell>
+        <mxCell id="6Pg4M3MRJXrsTJBjLDmR-67" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" value="my-model.pt" vertex="1">
+          <mxGeometry height="90" width="90" x="349.98" y="1820" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
