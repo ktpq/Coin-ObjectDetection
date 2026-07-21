@@ -40,7 +40,7 @@ window_commands = [
     # 3. เริ่มกระบวนการเทรน YOLO (อัปเกรดความฉลาด + รีดพลัง GTX 1650)
     (
         "yolo detect train data=data.yaml model=yolo11s.pt "
-        "epochs=100 patience=20 imgsz=640 batch=8 workers=0 device=0 "
+        "epochs=300 patience=50 imgsz=480 batch=8 workers=0 device=0 "
     ),
 
     # 4. ก๊อป model ออกมาที่ root dir ให้พร้อมใช้งาน

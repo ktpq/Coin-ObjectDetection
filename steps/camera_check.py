@@ -2,7 +2,7 @@ import cv2
 from ultralytics import YOLO
 
 # 1. โหลดโมเดลของคุณ
-model = YOLO("my-model.pt") 
+model = YOLO("water_level.pt") 
 
 # 2. เปิดกล้อง Webcam (เลข 0 หมายถึงกล้องตัวแรกของเครื่อง)
 # cap = cv2.VideoCapture(0)

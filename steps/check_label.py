@@ -1,6 +1,15 @@
 import cv2
 import os
 
+# ✨ 1. กำหนดชื่อ Class ตามลำดับ (Index เริ่มที่ 0)
+# (แก้ชื่อตรงนี้ให้ตรงกับในไฟล์ classes.txt ของคุณได้เลยครับ)
+CLASS_NAMES = [
+    "1 Baht",      # ID 0
+    "5 Baht",      # ID 1
+    "10 Baht",      # ID 2
+    "2 Baht"      # ID 3
+]
+
 # กำหนด Path ไปที่โฟลเดอร์ที่เราเพิ่ง Auto-label เสร็จ
 img_dir = "./custom_data/images"
 lbl_dir = "./custom_data/labels"
@@ -30,7 +39,7 @@ for filename in os.listdir(img_dir):
             
         img_height, img_width, _ = img.shape
 
-        # ✨ เสริมขอบดำรอบรูปภาพ (บน, ล่าง, ซ้าย, ขวา)
+        # เสริมขอบดำรอบรูปภาพ (บน, ล่าง, ซ้าย, ขวา)
         img_padded = cv2.copyMakeBorder(
             img, PADDING, PADDING, PADDING, PADDING, 
             cv2.BORDER_CONSTANT, value=[0, 0, 0]
@@ -63,21 +72,26 @@ for filename in os.listdir(img_dir):
                         x_max = int(cx + (w / 2))
                         y_max = int(cy + (h / 2))
 
-                        # วาดกรอบสีเขียวหนา 4 px (เพิ่มความหนาเผื่อตอนโดนย่อรูป)
+                        # วาดกรอบสีเขียวหนา 4 px
                         cv2.rectangle(img_padded, (x_min, y_min), (x_max, y_max), (0, 255, 0), 4)
                         
-                        # แปะ Text รหัส Class ไว้บนกล่อง (ขยายฟอนต์ให้ใหญ่ขึ้นเผื่อโดนย่อ)
-                        cv2.putText(img_padded, f"Class {class_id}", (x_min, y_min - 15), 
+                        # ✨ 2. ดึงชื่อคลาสมาแสดงผล (พร้อมดัก Error กันเหนียว)
+                        if class_id < len(CLASS_NAMES):
+                            label_name = CLASS_NAMES[class_id]
+                        else:
+                            label_name = f"Unknown ({class_id})"
+
+                        # แปะ Text ชื่อ Label ไว้บนกล่อง
+                        cv2.putText(img_padded, label_name, (x_min, y_min - 15), 
                                     cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 0), 3)
 
-        # --- ✨ โค้ดย่อขนาดรูปก่อนแสดงผล ✨ ---
+        # โค้ดย่อขนาดรูปก่อนแสดงผล
         h, w = img_padded.shape[:2]
         if h > MAX_HEIGHT:
             scale = MAX_HEIGHT / h
             new_w = int(w * scale)
             new_h = int(h * scale)
             img_padded = cv2.resize(img_padded, (new_w, new_h))
-        # ------------------------------------
 
         # โชว์รูปภาพที่เติมขอบและย่อขนาดแล้ว
         cv2.imshow("Check Auto-Label", img_padded)

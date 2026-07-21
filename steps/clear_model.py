@@ -5,7 +5,7 @@ def cleanup_workspace():
     print("🧹 เริ่มกระบวนการทำความสะอาด Workspace...\n")
 
     # กำหนดเป้าหมายที่ต้องการลบ
-    folders_to_delete = ['custom_data', 'data', 'runs', 'cropped_coins', 'custom_data', 'dataset', 'test_images_flat']
+    folders_to_delete = ['data', 'runs', 'cropped_coins', 'custom_data', 'dataset', 'test_images_flat']
     
     # หมายเหตุ: ใส่ทั้ง data.yml และ data.yaml เผื่อไว้ในกรณีที่พิมพ์นามสกุลต่างกัน
     files_to_delete = ['data.yml', 'data.yaml', 'yolo11s.pt', 'my-model.pt']

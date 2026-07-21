@@ -14,10 +14,10 @@ def run_cmd(command):
 window_commands = [
     'python steps\\clear_model.py',
 
-    # phase1
+    # # phase1
     'python steps\\flat_images.py',
 
-    # phase2
+    # # phase2
     'python steps\\find_coin.py',
     'python steps\\build_custom_data.py',
 
