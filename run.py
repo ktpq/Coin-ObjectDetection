@@ -17,7 +17,7 @@ window_commands = [
     # # phase1
     'python steps\\flat_images.py',
 
-    # # phase2
+    # phase2
     'python steps\\find_coin.py',
     'python steps\\build_custom_data.py',
 
@@ -33,13 +33,13 @@ window_commands = [
     'python steps\\clear_unused_file.py',
 ]
 
-# ⏱️ เริ่มจับเวลาตรงนี้!
+# เริ่มจับเวลาตรงนี้
 start_time = time.time()
 
 for cmd in window_commands:
     run_cmd(cmd)
 
-# ⏱️ สิ้นสุดการรัน หยุดจับเวลา
+# สิ้นสุดการรัน หยุดจับเวลา
 end_time = time.time()
 
 # คำนวณระยะเวลา

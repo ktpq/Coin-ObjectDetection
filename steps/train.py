@@ -1,6 +1,10 @@
 import subprocess
 
 import sys
+import os
+from dotenv import load_dotenv
+load_dotenv()
+created_model_name = os.environ.get("CREATED_MODEL_NAME")
 
 def run_cmd(command):
     print(f"\n🚀 กำลังรันคำสั่ง: {command}")
@@ -44,7 +48,7 @@ window_commands = [
     ),
 
     # 4. ก๊อป model ออกมาที่ root dir ให้พร้อมใช้งาน
-    "copy runs\\detect\\train\\weights\\best.pt my-model.pt"
+    f"copy runs\\detect\\train\\weights\\best.pt {created_model_name}.pt"
 ]
 
 for cmd in window_commands:

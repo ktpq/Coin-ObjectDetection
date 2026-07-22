@@ -1,14 +1,19 @@
 import cv2
 import os
 
-# ✨ 1. กำหนดชื่อ Class ตามลำดับ (Index เริ่มที่ 0)
-# (แก้ชื่อตรงนี้ให้ตรงกับในไฟล์ classes.txt ของคุณได้เลยครับ)
-CLASS_NAMES = [
-    "1 Baht",      # ID 0
-    "5 Baht",      # ID 1
-    "10 Baht",      # ID 2
-    "2 Baht"      # ID 3
-]
+# ✨ 1. โหลดชื่อ Class อัตโนมัติจากไฟล์ classes.txt
+classes_path = "./custom_data/classes.txt"
+if os.path.exists(classes_path):
+    with open(classes_path, 'r', encoding='utf-8') as f:
+        CLASS_NAMES = [line.strip() for line in f.readlines() if line.strip()]
+else:
+    print(f"⚠️ ไม่พบไฟล์ {classes_path} กำลังใช้ค่า Default")
+    CLASS_NAMES = [
+        "1 Baht",      # ID 0
+        "5 Baht",      # ID 1
+        "10 Baht",      # ID 2
+        "2 Baht"      # ID 3
+    ]
 
 # กำหนด Path ไปที่โฟลเดอร์ที่เราเพิ่ง Auto-label เสร็จ
 img_dir = "./custom_data/images"

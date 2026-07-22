@@ -1,8 +1,11 @@
-import os
 from ultralytics import YOLO
+import os
+from dotenv import load_dotenv
+load_dotenv()
+model_name = os.environ.get("MODEL_NAME")
 
 # 1. โหลดโมเดลของคุณ
-model = YOLO("my-model.pt") 
+model = YOLO(f"{model_name}.pt") 
 
 # 2. กำหนด Path ของ "โฟลเดอร์" ที่เก็บรูปภาพทั้งหมด
 

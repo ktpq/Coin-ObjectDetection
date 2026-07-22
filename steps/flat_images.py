@@ -1,11 +1,16 @@
-import os
+
 import cv2
+
+import os
+from dotenv import load_dotenv
+load_dotenv()
+images_path = os.environ.get("IMAGES_PATH")
 
 # 1. หาตำแหน่งของไฟล์สคริปต์นี้ก่อน (มันจะรู้ตัวว่าอยู่ในโฟลเดอร์ steps)
 CURRENT_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # 2. ถอยขึ้นไป 1 ชั้น (..) แล้วเข้าไปหาโฟลเดอร์เป้าหมาย (เปลี่ยนเป็น images2 แล้ว)
-SOURCE_DIR = os.path.join(CURRENT_DIR, "..", "images2")
+SOURCE_DIR = os.path.join(CURRENT_DIR, "..", f"{images_path}")
 FLAT_DIR = os.path.join(CURRENT_DIR, "..", "test_images_flat")
 
 os.makedirs(FLAT_DIR, exist_ok=True)

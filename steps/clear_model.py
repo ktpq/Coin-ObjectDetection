@@ -1,5 +1,9 @@
-import os
 import shutil
+
+import os
+from dotenv import load_dotenv
+load_dotenv()
+created_model_name = os.environ.get("CREATED_MODEL_NAME")
 
 def cleanup_workspace():
     print("🧹 เริ่มกระบวนการทำความสะอาด Workspace...\n")
@@ -8,7 +12,7 @@ def cleanup_workspace():
     folders_to_delete = ['data', 'runs', 'cropped_coins', 'custom_data', 'dataset', 'test_images_flat']
     
     # หมายเหตุ: ใส่ทั้ง data.yml และ data.yaml เผื่อไว้ในกรณีที่พิมพ์นามสกุลต่างกัน
-    files_to_delete = ['data.yml', 'data.yaml', 'yolo11s.pt', 'my-model.pt']
+    files_to_delete = ['data.yml', 'data.yaml', 'yolo11s.pt', f'{created_model_name}.pt']
 
     # 1. จัดการลบโฟลเดอร์ (ใช้ shutil.rmtree เพื่อลบโฟลเดอร์ที่มีของข้างใน)
     for folder in folders_to_delete:

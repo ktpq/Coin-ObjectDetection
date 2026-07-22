@@ -4,6 +4,9 @@ from PIL import Image
 import numpy as np
 import cv2
 import os
+from dotenv import load_dotenv
+load_dotenv()
+model_name = os.environ.get("MODEL_NAME")
 
 # ─── Page Config ───
 st.set_page_config(
@@ -115,7 +118,7 @@ st.markdown('<div class="sub-title">อัปโหลดรูปภาพเ�
 # ─── Load Model (cached) ───
 @st.cache_resource
 def load_model():
-    model_path = os.path.join(os.path.dirname(__file__), "my-model.pt")
+    model_path = os.path.join(os.path.dirname(__file__), f"{model_name}.pt")
     return YOLO(model_path)
 
 model = load_model()
