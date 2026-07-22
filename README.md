@@ -1,5 +1,3 @@
-<img width="924" height="698" alt="image" src="https://github.com/user-attachments/assets/8390bd10-ae9a-4540-8199-810933d73bad" /># Coin Object Detection
-
 ## รายละเอียดโปรเจกต์
 
 วัตถุประสงค์หลักของโปรเจกต์นี้คือ:
